@@ -32,6 +32,7 @@
 
 	header("Location: index.php");
 	}
+	
 	$id = $_GET['id'];
  
 	$query = 'SELECT * From anggota where id=$id';

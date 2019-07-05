@@ -31,7 +31,7 @@
     <a href="index.php">Home</a>
 	<br/><br/>
 	
-	<form nama="update_anggota" method="post" action="edit.php">
+	<form nama="update_anggota" method="post" action="tambah.php">
 		<table width="25%" border="0">
 			<tr> 
 				<td>nama</td>
