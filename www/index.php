@@ -35,7 +35,7 @@
     }
 
     echo '</table>';
-
+	echo '<br/><br/><a href="tambah.php">tambah anggota</a>';
     /* Libération du jeu de résultats */
     $result->close();
 
