@@ -15,7 +15,6 @@
 
     <?php
 
-    // Connexion et sélection de la base
     $conn = mysqli_connect('db', 'user', 'test', "myDb");
 
 
@@ -23,10 +22,10 @@
     $result = mysqli_query($conn, $query);
 
     echo '<table class="table table-striped">';
-    <tr>
-        <th>nama</th> <th>alamat</th> <th>email</th> <th>aksi</th>
-    </tr>
-    <?php  
+    echo '<tr>';
+    echo '<th>nama</th> <th>alamat</th> <th>email</th> <th>aksi</th>';
+    echo '</tr>';
+  
     while($anggota_data = mysqli_fetch_array($result)) {         
         echo "<tr>";
         echo "<td>".$anggota_data['nama']."</td>";
@@ -34,7 +33,7 @@
         echo "<td>".$anggota_data['email']."</td>";    
         echo "<td><a href='ubah.php?id=$anggota_data[id]'>ubah</a> | <a href='hapus.php?id=$anggota_data[id]'>hapus</a></td></tr>";        
     }
-    ?>
+
     echo '</table>';
 
     /* Libération du jeu de résultats */
