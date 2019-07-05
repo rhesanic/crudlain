@@ -37,8 +37,7 @@
 	$query = 'SELECT * From anggota where id=$id';
     $result = mysqli_query($conn, $query);
 	 
-	while($anggota_data = mysqli_fetch_array($result))
-	{
+	while($anggota_data = mysqli_fetch_array($result)) { 
 		$nama = $anggota_data['nama'];
 		$email = $anggota_data['email'];
 		$alamat = $anggota_data['alamat'];
@@ -47,7 +46,7 @@
     <a href="index.php">Home</a>
 	<br/><br/>
 	
-	<form nama="update_anggota" method="post" action="edit.php">
+	<form nama="update_anggota" method="post" action="ubah.php">
 		<table border="0">
 			<tr> 
 				<td>nama</td>
