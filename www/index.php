@@ -23,16 +23,18 @@
     $result = mysqli_query($conn, $query);
 
     echo '<table class="table table-striped">';
-    echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
-    while($value = $result->fetch_array(MYSQLI_ASSOC)){
-        echo '<tr>';
-        echo '<td><a href="#"><span class="glyphicon glyphicon-search"></span></a></td>';
-        foreach($value as $element){
-            echo '<td>' . $element . '</td>';
-        }
-
-        echo '</tr>';
+    <tr>
+        <th>nama</th> <th>alamat</th> <th>email</th> <th>aksi</th>
+    </tr>
+    <?php  
+    while($anggota_data = mysqli_fetch_array($result)) {         
+        echo "<tr>";
+        echo "<td>".$anggota_data['nama']."</td>";
+        echo "<td>".$anggota_data['alamat']."</td>";
+        echo "<td>".$anggota_data['email']."</td>";    
+        echo "<td><a href='ubah.php?id=$anggota_data[id]'>ubah</a> | <a href='hapus.php?id=$anggota_data[id]'>hapus</a></td></tr>";        
     }
+    ?>
     echo '</table>';
 
     /* Libération du jeu de résultats */
