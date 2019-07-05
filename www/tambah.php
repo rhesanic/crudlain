@@ -51,13 +51,7 @@
 			</tr>
 		</table>
 	</form>
-	<?php
-    /* Libération du jeu de résultats */
-    $result->close();
-
-    mysqli_close($conn);
-
-    ?>
+	
     </div>
 </body>
 </html>
