@@ -16,22 +16,6 @@
     <?php
 
     $conn = mysqli_connect('db', 'user', 'test', "myDb");
-
-
-    
-	if(isset($_POST['update']))
-	{	
-	$id = $_POST['id'];
-	
-	$nama=$_POST['nama'];
-	$alamat=$_POST['alamat'];
-	$email=$_POST['email'];
-	
-	$query = 'update anggota set nama=$nama,email=$email,alamat=$alamat WHERE id=$id';
-    $result = mysqli_query($conn, $query);	
-
-	header("Location: index.php");
-	}
 	
 	$id = $_GET['id'];
  
