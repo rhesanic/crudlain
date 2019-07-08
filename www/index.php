@@ -30,7 +30,7 @@
         echo "<td>".$anggota_data['nama']."</td>";
         echo "<td>".$anggota_data['alamat']."</td>";
         echo "<td>".$anggota_data['email']."</td>";    
-        echo "<td><a href='ubah.php?id=$anggota_data[id]'>ubah</a> | <a href='hapus.php?id=$anggota_data[id]'>hapus</a></td></tr>";        
+        echo "<td><a href='ubah.php?id=$anggota_data[id]'>ubah</a> | <a href='prhapus.php?id=$anggota_data[id]'>hapus</a></td></tr>";        
     }
 
     echo '</table>';
