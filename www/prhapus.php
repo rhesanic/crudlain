@@ -1,3 +1,4 @@
+<?php echo "<h1>rhesanic</h1>"; ?>
 <?php
 
     $conn = mysqli_connect('db', 'user', 'test', "myDb");
