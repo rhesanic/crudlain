@@ -19,15 +19,15 @@
 		<table width="25%" border="0">
 			<tr> 
 				<td>nama</td>
-				<td><input type="text" nama="nama"></td>
+				<td><input type="text" name="nama"></td>
 			</tr>
 			<tr> 
 				<td>Email</td>
-				<td><input type="text" nama="email"></td>
+				<td><input type="text" name="email"></td>
 			</tr>
 			<tr> 
 				<td>alamat</td>
-				<td><input type="text" nama="alamat"></td>
+				<td><input type="text" name="alamat"></td>
 			</tr>
 			<tr> 
 				<td></td>
