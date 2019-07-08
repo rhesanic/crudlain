@@ -6,7 +6,7 @@
 		$email = $_POST['email'];
 		$alamat = $_POST['alamat'];
 	
-	$query = "insert into anggota (nama,email,alamat) values ('$nama','$email','$alamat')";
+	$query = 'insert into anggota (nama,email,alamat) values ('.$nama.','.$email.','.$alamat.')';
     $result = mysqli_query($conn, $query);	
 	if(!$result){
 								echo "Gagal Tambah Mobil!</br>";

@@ -31,7 +31,7 @@
 			</tr>
 			<tr> 
 				<td></td>
-				<td><input type="submit" nama="Submit" value="Submit"></td>
+				<td><button type="submit" class="btn btn-default">tambah</button></td>
 			</tr>
 		</table>
 	</form>
