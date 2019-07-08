@@ -2,21 +2,23 @@
 
     $conn = mysqli_connect('db', 'user', 'test', "myDb");
 	
-		$nama = $_POST['nama'];
-		$email = $_POST['email'];
-		$alamat = $_POST['alamat'];
+	$id = $_POST['id'];
 	
-	$query = "insert into anggota (nama, email, alamat) values ('$nama', '$email', '$alamat')";
+	$nama=$_POST['nama'];
+	$alamat=$_POST['alamat'];
+	$email=$_POST['email'];
+	
+	$query = "update anggota set nama='$nama',email='$email',alamat='$alamat' WHERE id='$id'";
     $result = mysqli_query($conn, $query);	
 	if(!$result){
-								echo "Gagal Tambah data!</br>";
+								echo "Gagal update data!</br>";
 								echo mysqli_error($conn);
-								echo "<form action='tambah.php'>
+								echo "<form action='ubah.php'>
 										<input type='submit' onClick='self.history.back()' value='Kembali' />
 										</form>";
 										}else {
-								echo "Berhasil Tambah data!</br>";
+								echo "Berhasil update data!</br>";
 								echo "silahkan <a href='index.php'>index</a>";	
 								}
-	
+
 ?>

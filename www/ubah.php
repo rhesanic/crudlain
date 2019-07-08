@@ -19,7 +19,7 @@
 	
 	$id = $_GET['id'];
  
-	$query = 'SELECT * From anggota where id=$id';
+	$query = "SELECT * From anggota where id='$id'";
     $result = mysqli_query($conn, $query);
 	 
 	while($anggota_data = mysqli_fetch_array($result)) { 
@@ -31,23 +31,23 @@
     <a href="index.php">Home</a>
 	<br/><br/>
 	
-	<form nama="update_anggota" method="post" action="ubah.php">
+	<form nama="update_anggota" method="post" action="prubah.php">
 		<table border="0">
 			<tr> 
 				<td>nama</td>
-				<td><input type="text" nama="nama" value=<?php echo $nama;?>></td>
+				<td><input type="text" name="nama" value=<?php echo $nama;?>></td>
 			</tr>
 			<tr> 
 				<td>Email</td>
-				<td><input type="text" nama="email" value=<?php echo $email;?>></td>
+				<td><input type="text" name="email" value=<?php echo $email;?>></td>
 			</tr>
 			<tr> 
 				<td>alamat</td>
-				<td><input type="text" nama="alamat" value=<?php echo $alamat;?>></td>
+				<td><input type="text" name="alamat" value=<?php echo $alamat;?>></td>
 			</tr>
 			<tr>
-				<td><input type="hidden" nama="id" value=<?php echo $_GET['id'];?>></td>
-				<td><input type="submit" nama="update" value="Update"></td>
+				<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
+				<td><button type="submit" class="btn btn-default">update</button></td>
 			</tr>
 		</table>
 	</form>
