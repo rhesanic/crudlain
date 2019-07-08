@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>Hello...</title>
+  <title>rhesa</title>
 
   <meta charset="utf-8"> 
 
@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-    <?php echo "<h1>Hi! I'm happy</h1>"; ?>
+    
 
     <?php
 
@@ -24,7 +24,16 @@
 	
 	$query = "insert into anggota (nama,email,alamat) values ('$nama','$email','$alamat')";
     $result = mysqli_query($conn, $query);	
-
+	if(!$result){
+								echo "Gagal Tambah Mobil!</br>";
+								echo mysqli_error($conn);
+								echo "<form action='form_dfakun.html'>
+										<input type='submit' onClick='self.history.back()' value='Kembali' />
+										</form>";
+										}else {
+								echo "Berhasil Tambah Mobil!</br>";
+								echo "silahkan <a href='form_login.php'>login</a>";	
+								}
 	}
 	
 	?>
@@ -47,7 +56,7 @@
 			</tr>
 			<tr> 
 				<td></td>
-				<td><input type="submit" nama="Submit" value="tambah"></td>
+				<td><input type="submit" nama="Submit" value="Submit"></td>
 			</tr>
 		</table>
 	</form>

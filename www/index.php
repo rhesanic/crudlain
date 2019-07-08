@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>Hello...</title>
+  <title>rhesa.</title>
 
   <meta charset="utf-8"> 
 
@@ -11,7 +11,6 @@
 </head>
 <body>
     <div class="container">
-    <?php echo "<h1>Hi! I'm happy</h1>"; ?>
 
     <?php
 
