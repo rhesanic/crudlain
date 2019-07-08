@@ -11,36 +11,11 @@
 </head>
 <body>
     <div class="container">
-    
-
-    <?php
-
-    $conn = mysqli_connect('db', 'user', 'test', "myDb");
-    
-	if(isset($_POST['Submit'])) {
-		$nama = $_POST['nama'];
-		$email = $_POST['email'];
-		$alamat = $_POST['alamat'];
-	
-	$query = "insert into anggota (nama,email,alamat) values ('$nama','$email','$alamat')";
-    $result = mysqli_query($conn, $query);	
-	if(!$result){
-								echo "Gagal Tambah Mobil!</br>";
-								echo mysqli_error($conn);
-								echo "<form action='form_dfakun.html'>
-										<input type='submit' onClick='self.history.back()' value='Kembali' />
-										</form>";
-										}else {
-								echo "Berhasil Tambah Mobil!</br>";
-								echo "silahkan <a href='form_login.php'>login</a>";	
-								}
-	}
-	
-	?>
+        
     <a href="index.php">Home</a>
 	<br/><br/>
 	
-	<form nama="update_anggota" method="post" action="tambah.php">
+	<form nama="update_anggota" method="post" action="prtambah.php">
 		<table width="25%" border="0">
 			<tr> 
 				<td>nama</td>
